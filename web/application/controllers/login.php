@@ -94,7 +94,20 @@ class Login extends CI_Controller {
         }
 
         $logoimg = $this->config->item('login_page_logo');
+        $logoimgfc = $this->config->item('login_page_logo_fc');
+        $logoimgmairieparis = $this->config->item('login_page_logo_mairieparis');
+        $logoimgmairielyon = $this->config->item('login_page_logo_mairielyon');
+        $logoimgmairiemarseille = $this->config->item('login_page_logo_mairiemarseille');
+        $logoimgpp = $this->config->item('login_page_logo_pp');
+        $logoimgminint = $this->config->item('login_page_logo_minint');
+
         $data['logo'] = custom_logo_login($logoimg, $title);
+        $data['logo_fc'] = custom_logo_login($logoimgfc, "france connect");
+        $data['logo_mairieparis'] = custom_logo_login($logoimgmairieparis, "mairie de paris");
+        $data['logo_mairielyon'] = custom_logo_login($logoimgmairielyon, "mairie de lyon");
+        $data['logo_mairiemarseille'] = custom_logo_login($logoimgmairiemarseille,"mairie de marseille");
+        $data['logo_pp'] = custom_logo_login($logoimgpp,'préfecture de police');
+        $data['logo_minint'] = custom_logo_login($logoimgminint,'ministère de l\'intérieur');
         $data['title'] = $title;
 
         $page_components['content'] = $this->load->view('login', $data, TRUE);

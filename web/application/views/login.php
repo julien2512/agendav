@@ -2,7 +2,9 @@
   .loginlogo
   {
     width : 50%;
-    float : left; 
+    float : center;
+    margin-left: auto;
+    margin-right: auto; 
   }
   .loginform
   {
@@ -10,10 +12,9 @@
   }
 </style>
 
-<div class="page-header">
-<h1><?php echo $this->config->item('site_title')?></h1>
+<div>
+<h1>&nbsp;</h1>
 </div>
-
 
 <?php
 if (!empty($errors)):
@@ -30,11 +31,26 @@ if (!empty($errors)):
 endif;
 ?>
 
+<table>
+<tr>
+<td>
+<table>
+<tr>
+<td style="width:500px; text-align:center">
+<div class="page-header">
+<h1><?php echo $this->config->item('site_title')?></h1>
+</div>
 <?php
 if (isset($logo)) {
 	echo $logo;
 }
 ?>
+</td>
+<td>
+<table style="width:500px">
+<tr>
+<td style="background-color:white">
+Connectez-vous avec vos identifiants :
 <div class="loginform ui-corner-all">
 
   <?php
@@ -70,4 +86,87 @@ if (isset($logo)) {
   echo form_submit('login', $this->i18n->_('labels', 'login'));
   echo form_close();
  ?>
+<u>mot de passe oublié ?</u>&nbsp;&nbsp;&nbsp;&nbsp;<u>créer un compte</u>
 </div>
+</td>
+</tr>
+<tr>
+<td style="background-color:white">
+Ou authentifiez-vous avec France Connect :
+<div style="width:500px; float:center;">
+<?php
+if (isset($logo_fc)) {
+        echo $logo_fc;
+}
+?>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<div style="margin:auto">
+<table>
+<tr style="background-color:white">
+<td>
+<?php
+if (isset($logo_mairieparis))
+       echo $logo_mairieparis;
+?>
+</td>
+<td>
+<?php
+if (isset($logo_mairielyon))
+       echo $logo_mairielyon;
+?>
+</td>
+<td>
+<?php
+if (isset($logo_mairiemarseille))
+       echo $logo_mairiemarseille;
+?>
+</td>
+<td>
+<?php
+if (isset($logo_pp))
+       echo $logo_pp;
+?>
+</td>
+<td>
+<?php
+if (isset($logo_minint))
+       echo $logo_minint;
+?>
+</td>
+</tr>
+<tr>
+&nbsp;
+</tr>
+<tr>
+<td colspan=5>
+<ul>
+<li style="float:left; margin-left:300px; margin-right:5px">
+<u>Mentions légales</u>
+</li>
+<li style="float:left; margin-left:18px; margin-right:5px">
+<u>FAQ</u>
+</li>
+<li style="float:left; margin-left:18px; margin-right:5px">
+<u>Nous contacter</u>
+</li>
+<li style="float:left; margin-left:18px; margin-right:5px">
+<u>Créer votre appli de rendez-vous !</u>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>

@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container">
+<div class="page-header">
+  <h1>{{ title }}</h1>
+</div>
+
+{% if logo %}
+<div id="logo" class="block">
+  <img src="{{ app.request.basepath }}/img/{{ logo }}" alt="Logo">
+</div>
+{% endif %}
+
+{% if error is defined %}
+<div class="ui-widget loginerrors">
+ <div class="ui-state-error ui-corner-all" style="padding: 0 .7em;">
+  <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span> 
+  {{ error|e }}
+  </p>
+  </div>
+</div>
+{% endif %}
+
+<div class="loginform ui-corner-all">
+  <a href="{{ url }}">Connexion</a>
+</div>
+</div>
+{% endblock %}

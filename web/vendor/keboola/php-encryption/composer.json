@@ -1,0 +1,24 @@
+{
+    "name": "keboola/php-encryption",
+    "description": "Mcrypt wrapper - AES encryption support",
+    "license": "MIT",
+	"keywords": ["security", "encryption", "AES", "mcrypt", "cipher"],
+    "authors": [
+        {
+            "name": "Martin Halamicek",
+            "email": "martin@halamicek.cz"
+        }
+    ],
+    "require": {
+		"php": ">=5.3.3",
+		"ext-mcrypt": "*"
+    },
+	"require-dev": {
+		"phpunit/phpunit": "3.7.*"
+	},
+	"autoload": {
+		"psr-0": {
+			"Keboola\\Encryption": "src/"
+		}
+	}
+}

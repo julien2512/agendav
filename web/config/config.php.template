@@ -111,7 +111,14 @@ $config['site_title'] = 'Calendar web access for My Company LTD';
 | Filename from public/img
 |
 */
-$config['logo'] = 'agendav_100transp.png';
+$config['login_page_logo'] = 'glasswing butterfly-agenda.jpg';
+$config['logo'] = 'glasswing butterfly-agenda-40.jpg';
+$config['login_page_logo_fc'] = 'franceconnect.png';
+$config['login_page_logo_mairieparis'] = 'mairieparis.jpeg';
+$config['login_page_logo_mairielyon'] = 'mairielyon.jpeg';
+$config['login_page_logo_mairiemarseille'] = 'mairiemarseille.jpeg';
+$config['login_page_logo_pp'] = 'pp.jpeg';
+$config['login_page_logo_minint'] = 'minint.jpeg';
 
 /*
 |--------------------------------------------------------------------------
